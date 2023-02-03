@@ -7,17 +7,26 @@ indent_style = space
 insert_final_newline = true
 trim_trailing_whitespace = true
 
+# python
 [*.py]
 indent_size = 4
-tab_width = 4
 
+# docs
 [*.md]
 trim_trailing_whitespace = false
 
+# shell scripts
 [{*.bash,*.sh,*.zsh}]
 indent_size = 2
-tab_width = 2
 
-[{*.json,*.js}]
+# javascript
+[*.js{,on,x}]
 indent_size = 2
-tab_width = 2
+
+# html
+[*.htm{,l}]
+indent_size = 2
+
+# config files
+[*.{toml,yaml,yml}]
+indent_size = 2
