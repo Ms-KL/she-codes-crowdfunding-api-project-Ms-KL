@@ -4,20 +4,19 @@ from django.db import migrations, models
 
 
 class Migration(migrations.Migration):
-
     dependencies = [
-        ('projects', '0007_alter_pledge_amount_alter_project_goal'),
+        ("projects", "0007_alter_pledge_amount_alter_project_goal"),
     ]
 
     operations = [
         migrations.AlterField(
-            model_name='pledge',
-            name='amount',
+            model_name="pledge",
+            name="amount",
             field=models.IntegerField(),
         ),
         migrations.AlterField(
-            model_name='project',
-            name='goal',
+            model_name="project",
+            name="goal",
             field=models.IntegerField(),
         ),
     ]

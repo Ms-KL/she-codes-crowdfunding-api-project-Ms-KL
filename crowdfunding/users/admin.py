@@ -4,18 +4,20 @@ from django.contrib.auth.admin import UserAdmin
 
 from .models import CustomUser
 
+
 class CustomUserAdmin(UserAdmin):
     model = CustomUser
     fieldsets = (
         *UserAdmin.fieldsets,
         (
-            'Additional User Information',
+            "Additional User Information",
             {
-                'fields':(
-                    'bio','avatar',
+                "fields": (
+                    "bio",
+                    "avatar",
                 )
-            }
-        )
+            },
+        ),
     )
 
 

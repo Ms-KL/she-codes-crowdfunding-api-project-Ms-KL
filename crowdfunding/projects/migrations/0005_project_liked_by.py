@@ -5,16 +5,17 @@ from django.db import migrations, models
 
 
 class Migration(migrations.Migration):
-
     dependencies = [
         migrations.swappable_dependency(settings.AUTH_USER_MODEL),
-        ('projects', '0004_alter_pledge_supporter_alter_project_owner'),
+        ("projects", "0004_alter_pledge_supporter_alter_project_owner"),
     ]
 
     operations = [
         migrations.AddField(
-            model_name='project',
-            name='liked_by',
-            field=models.ManyToManyField(related_name='liked_projects', to=settings.AUTH_USER_MODEL),
+            model_name="project",
+            name="liked_by",
+            field=models.ManyToManyField(
+                related_name="liked_projects", to=settings.AUTH_USER_MODEL
+            ),
         ),
     ]

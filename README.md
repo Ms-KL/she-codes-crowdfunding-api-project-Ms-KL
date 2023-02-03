@@ -1,6 +1,6 @@
 # {{ Communitree: DRF Crowdfunding Project }}
 
-Welcome to Communitree, where tree-huggers gather to make a real impact on the urban forest of their community. Local Governments, schools and environmental organisations can create projects to raise funds for community busy bees and planting days/events. Supporters can pledge resources to help these projects. 
+Welcome to Communitree, where tree-huggers gather to make a real impact on the urban forest of their community. Local Governments, schools and environmental organisations can create projects to raise funds for community busy bees and planting days/events. Supporters can pledge resources to help these projects.
 
 <br>
 
@@ -12,8 +12,8 @@ Welcome to Communitree, where tree-huggers gather to make a real impact on the u
   - [Submission Document (Canva)](https://www.canva.com/design/DAFXgSq-5YI/VoGjxBH0387phr6s29IV1A/view?utm_content=DAFXgSq-5YI&utm_campaign=designshare&utm_medium=link&utm_source=publishshare)
   - [User Flow-Chart (Figma)](https://www.figma.com/file/TTOAG3ee2VSnR9JWF2aG6l/Crowdfunding-Project?node-id=0%3A1&t=wOw8Y89TyRAGQ2p3-0)
   - [GitHub MVP Submission Folder](https://github.com/SheCodesAus/she-codes-crowdfunding-api-project-Ms-KL/tree/main/project_submission/MVP%20Submission)
-  
-### **Part A Submission:** 
+
+### **Part A Submission:**
   - [Deployed Project (Fly)](https://icy-dew-540.fly.dev/)
   - [Submission Document (Canva)](https://www.canva.com/design/DAFYscsU8w8/eiO7sj6_0qJGhFXIMqWkKQ/view?utm_content=DAFYscsU8w8&utm_campaign=designshare&utm_medium=link&utm_source=publishsharelink)
   - [Insomnia Screenshots (Canva)](https://www.canva.com/design/DAFYscsU8w8/eiO7sj6_0qJGhFXIMqWkKQ/view?utm_content=DAFYscsU8w8&utm_campaign=designshare&utm_medium=link&utm_source=publishsharelink#5)
@@ -92,7 +92,7 @@ See Also: [Project Requirements Checklist](https://www.canva.com/design/DAFYscsU
 - [X] Create returns 201
 - [X] Not found returns 404
 
-### **Handle failed requests gracefully** 
+### **Handle failed requests gracefully**
 
 - [X] 404 response returns JSON rather than text
   - Note: navigation to an unexpected page (eg: pledges/abc/) will return a custom text error message. However expected pages with no data to return yet (eg: pledges/100/) will return JSON
@@ -155,7 +155,7 @@ See Also [MVP Submission - Features Page](https://www.canva.com/design/DAFXgSq-5
 - [X] A [link](https://icy-dew-540.fly.dev/) to the deployed project
 - [X] A [screenshot](https://www.canva.com/design/DAFYscsU8w8/eiO7sj6_0qJGhFXIMqWkKQ/view?utm_content=DAFYscsU8w8&utm_campaign=designshare&utm_medium=link&utm_source=publishsharelink#5) of Insomnia, demonstrating a successful GET method for any endpoint
 - [X] A [screenshot](https://www.canva.com/design/DAFYscsU8w8/eiO7sj6_0qJGhFXIMqWkKQ/view?utm_content=DAFYscsU8w8&utm_campaign=designshare&utm_medium=link&utm_source=publishsharelink#5) of Insomnia, demonstrating a successful POST method for any endpoint
-- [X] A [screenshot](https://www.canva.com/design/DAFYscsU8w8/eiO7sj6_0qJGhFXIMqWkKQ/view?utm_content=DAFYscsU8w8&utm_campaign=designshare&utm_medium=link&utm_source=publishsharelink#5) of Insomnia, demonstrating a token being returned 
+- [X] A [screenshot](https://www.canva.com/design/DAFYscsU8w8/eiO7sj6_0qJGhFXIMqWkKQ/view?utm_content=DAFYscsU8w8&utm_campaign=designshare&utm_medium=link&utm_source=publishsharelink#5) of Insomnia, demonstrating a token being returned
 - [X] Your refined [API Specification (2 pages)](https://www.canva.com/design/DAFYscsU8w8/eiO7sj6_0qJGhFXIMqWkKQ/view?utm_content=DAFYscsU8w8&utm_campaign=designshare&utm_medium=link&utm_source=publishsharelink#8) and [Database Schema](https://www.canva.com/design/DAFYscsU8w8/eiO7sj6_0qJGhFXIMqWkKQ/view?utm_content=DAFYscsU8w8&utm_campaign=designshare&utm_medium=link&utm_source=publishsharelink#7).
 
 ### **Documentation:**

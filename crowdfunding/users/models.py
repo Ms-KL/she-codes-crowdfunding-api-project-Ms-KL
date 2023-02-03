@@ -1,5 +1,6 @@
+from django.contrib.auth.models import AbstractUser  # added 17/1
 from django.db import models
-from django.contrib.auth.models import AbstractUser #added 17/1
+
 
 class CustomUser(AbstractUser):
     bio = models.CharField(blank=True, null=True, max_length=150)
