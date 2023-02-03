@@ -85,6 +85,27 @@ Refactored & Removed Code [for reference]
 
     users > views.py
 
+        class CustomUserList(APIView):
+
+    def get(self, request):
+        users = CustomUser.objects.all()
+        serializer = CustomUserSerializer(users, many=True)
+        return Response(serializer.data)
+        #same as project
+
+    def post(self, request):
+        serializer = CustomUserSerializer(data=request.data)
+        if serializer.is_valid():
+            serializer.save()
+            return Response(serializer.data, status=status.HTTP_201_CREATED)
+        else:
+            if 'email' in serializer.errors:
+                return Response({"error":"This email is associated with another user. Please login or choose an alternative email."}, status=status.HTTP_400_BAD_REQUEST)
+            else:
+                return Response(
+                    serializer.errors,
+                    status=status.HTTP_400_BAD_REQUEST)
+
         alt solution:
         class CustomUserDetail(APIView):
 
