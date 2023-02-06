@@ -18,7 +18,10 @@ Visit deployed app [HERE](https://icy-dew-540.fly.dev/)
 <br>
 <br>
 -----
-# Communitree: DRF Crowdfunding Project
+-----
+<br>
+
+# Communitree
 
 Welcome to Communitree, where tree-huggers gather to make a real impact on the urban forest of their community. Local Governments, schools and environmental organisations can create projects to raise funds for community busy bees and planting days/events. Supporters can pledge resources to help these projects.
 
