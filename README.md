@@ -1,4 +1,24 @@
-# {{ Communitree: DRF Crowdfunding Project }}
+# She Codes Plus Project 4: Crowdfunding Website 
+
+## About:
+This is Crowdfunding Website was created by Kristy Leigh as a project for the [She Codes Plus](https://www.shecodes.com.au/) program.<br>
+Visit deployed app [HERE](https://icy-dew-540.fly.dev/)
+### Tech & Skills Learned: 
+* Django
+* Django REST Framework
+* Python
+* VS Code
+* Github Desktop
+* Deployment
+* MVP Planning
+* Database Schemas
+* User Experience flowchart
+* API Specifications
+* Insomnia
+<br>
+<br>
+-----
+# Communitree: DRF Crowdfunding Project
 
 Welcome to Communitree, where tree-huggers gather to make a real impact on the urban forest of their community. Local Governments, schools and environmental organisations can create projects to raise funds for community busy bees and planting days/events. Supporters can pledge resources to help these projects.
 
