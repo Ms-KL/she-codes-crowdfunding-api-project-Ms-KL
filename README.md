@@ -15,10 +15,12 @@ Visit deployed app [HERE](https://icy-dew-540.fly.dev/)
 * User Experience flowchart
 * API Specifications
 * Insomnia
+
 <br>
-<br>
+
 ---
 ---
+
 <br>
 
 # Communitree
