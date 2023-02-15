@@ -1,3 +1,5 @@
+<img src="https://github.com/Ms-KL/Ms-KL/raw/main/images/shecodes-icon.png" width="80px" height="80px" />
+
 # She Codes Plus Project 4: Crowdfunding Website 
 
 ## About:
