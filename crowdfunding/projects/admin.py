@@ -8,7 +8,7 @@ from .models import Pledge, Project
 # -----------------------
 # ADMIN BLOCK
 class ProjectAdmin(admin.ModelAdmin):
-    list_display = ("id", "title", "owner", "goal", "is_open", "date_created")
+    list_display = ("id", "title", "owner", "goal", "is_open", "date_created", "deadline")
 
 
 admin.site.register(Project, ProjectAdmin)

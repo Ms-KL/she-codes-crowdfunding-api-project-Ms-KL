@@ -17,6 +17,7 @@ class Project(models.Model):
     date_created = models.DateTimeField(
         auto_now_add=True
     )  # TIP: auto_now_add=True... will update to time when created
+    deadline = models.DateTimeField(blank=True, null=True)
     owner = models.ForeignKey(  # the below connects the ID of the owner to the owner_projects
         User, on_delete=models.CASCADE, related_name="owner_projects"
     )
