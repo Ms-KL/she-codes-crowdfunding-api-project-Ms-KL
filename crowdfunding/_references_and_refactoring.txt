@@ -24,6 +24,7 @@ REFERENCES:
             https://www.grepper.com/tpc/django+rest+framework+serializer+hash+password
             https://stackoverflow.com/questions/38845051/how-to-update-user-password-in-django-rest-framework
             https://stackoverflow.com/a/38846554
+            https://www.django-rest-framework.org/api-guide/serializers/#validation
 
     users > views.py
 
@@ -41,6 +42,7 @@ REFERENCES:
         class ChangePasswordView(APIView):
             https://www.django-rest-framework.org/api-guide/views/
             https://stackoverflow.com/a/38846554
+            https://www.django-rest-framework.org/api-guide/serializers/#validation
 
     projects > views.py
 
