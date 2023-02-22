@@ -15,7 +15,7 @@ admin.site.register(Project, ProjectAdmin)
 
 
 class PledgeAdmin(admin.ModelAdmin):
-    list_display = ("id", "project", "supporter", "amount", "anonymous")
+    list_display = ("id", "project", "supporter", "amount", "anonymous", "date_pledged")
 
 
 admin.site.register(Pledge, PledgeAdmin)

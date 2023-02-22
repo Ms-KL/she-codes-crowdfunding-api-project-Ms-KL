@@ -19,7 +19,7 @@ class PledgeSerializer(serializers.ModelSerializer):
 
     class Meta:
         model = Pledge
-        fields = ["id", "amount", "comment", "anonymous", "project", "supporter"]
+        fields = ["id", "amount", "comment", "anonymous", "project", "supporter", "date_pledged"]
         read_only_fields = [
             "id",
             "supporter",
@@ -48,7 +48,7 @@ class PledgeDetailSerializer(PledgeSerializer):
 
     class Meta:
         model = Pledge
-        fields = ["id", "amount", "comment", "anonymous", "project", "supporter"]
+        fields = ["id", "amount", "comment", "anonymous", "project", "supporter", "date_pledged"]
         read_only_fields = ["id", "supporter", "amount", "project"]
 
 
