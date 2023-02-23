@@ -82,6 +82,7 @@ class ProjectSerializer(serializers.ModelSerializer):
 
 
 class CommentSerializer(serializers.ModelSerializer):
+    project = serializers.SlugRelatedField(queryset=Project.objects.all(), slug_field="title")
     commenter = serializers.ReadOnlyField(source="commenter.username")
 
     class Meta:
@@ -90,7 +91,8 @@ class CommentSerializer(serializers.ModelSerializer):
         read_only_fields = [
             "id",
             "commenter",
-        ]  # added to remove the needs to input a supporter {automates to logged in user}
+        ]
+    # added to remove the needs to input a supporter {automates to logged in user}
 
 
 class ProjectDetailSerializer(ProjectSerializer):
