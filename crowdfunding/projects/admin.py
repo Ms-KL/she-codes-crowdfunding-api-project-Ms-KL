@@ -1,6 +1,6 @@
 from django.contrib import admin
 
-from .models import Pledge, Project
+from .models import Pledge, Project, Comment
 
 # # Register your models here.
 
@@ -19,3 +19,10 @@ class PledgeAdmin(admin.ModelAdmin):
 
 
 admin.site.register(Pledge, PledgeAdmin)
+
+
+class CommentAdmin(admin.ModelAdmin):
+    list_display = ("id", "commenter", "body", "project", "created")
+
+
+admin.site.register(Comment, CommentAdmin)
