@@ -63,7 +63,7 @@ class Pledge(models.Model):
     """
 
     # amount = models.DecimalField(max_digits=10, decimal_places=2)
-    date_pledged = models.DateTimeField(blank=True, null=True)
+    date_pledged = models.DateTimeField(auto_now_add=True)
     amount = models.IntegerField()  # want to set a min of 1
     comment = models.CharField(max_length=200)
     anonymous = models.BooleanField()
