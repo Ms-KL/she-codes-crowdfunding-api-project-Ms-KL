@@ -140,7 +140,7 @@ class ObtainAuthToken(APIView):
         serializer.is_valid(raise_exception=True)
         user = serializer.validated_data['user']
         token, created = Token.objects.get_or_create(user=user)
-        return Response({'token': token.key, 'user': user})
+        return Response({'token': token.key, 'user': token.user})
 
 
 obtain_auth_token = ObtainAuthToken.as_view()
