@@ -46,6 +46,16 @@ class CustomUserDetailView(generics.RetrieveUpdateAPIView):
             )
         return super(CustomUserDetailView, self).handle_exception(exc)
 
+class SessionUserDetailView(generics.RetrieveUpdateAPIView):
+    permission_classes = (IsAuthenticated,)
+    lookup_field = 'id'
+    serializer_class = CustomUserDetail
+
+    def get_object(self):
+        return self.request.user
+
+    # https://www.cdrf.co/3.13/rest_framework.generics/RetrieveUpdateDestroyAPIView.html
+
 
 class ChangePasswordView(generics.RetrieveUpdateAPIView):
     permission_classes = (IsAuthenticated,)
