@@ -16,10 +16,11 @@ class PledgeSerializer(serializers.ModelSerializer):
 
     project = serializers.SlugRelatedField(queryset=Project.objects.all(), slug_field="title")
     supporter = serializers.SerializerMethodField()
+    supporter_avatar = serializers.SerializerMethodField()
 
     class Meta:
         model = Pledge
-        fields = ["id", "amount", "comment", "anonymous", "project", "supporter", "date_pledged"]
+        fields = ["id", "amount", "comment", "anonymous", "project", "supporter","supporter_avatar","date_pledged"]
         read_only_fields = [
             "id",
             "supporter",
@@ -38,6 +39,10 @@ class PledgeSerializer(serializers.ModelSerializer):
         else:
             return instance.supporter.username
 
+    def get_supporter_avatar(self, instance):
+        # providing access to the the avatar of the supporter
+        return instance.supporter.avatar
+
 
 class PledgeDetailSerializer(PledgeSerializer):
     """
@@ -48,7 +53,15 @@ class PledgeDetailSerializer(PledgeSerializer):
 
     class Meta:
         model = Pledge
-        fields = ["id", "amount", "comment", "anonymous", "project", "supporter", "date_pledged"]
+        fields = [
+            "id",
+            "amount",
+            "comment",
+            "anonymous",
+            "project",
+            "supporter",
+            "supporter_avatar",
+            "date_pledged"]
         read_only_fields = ["id", "supporter", "amount", "project"]
 
 
@@ -58,6 +71,7 @@ class ProjectSerializer(serializers.ModelSerializer):
     goal_balance = serializers.ReadOnlyField()
     funding_status = serializers.ReadOnlyField()
     owner = serializers.SerializerMethodField()
+    owner_avatar = serializers.SerializerMethodField()
 
     class Meta:
         model = Project
@@ -74,25 +88,36 @@ class ProjectSerializer(serializers.ModelSerializer):
             "sum_pledges",
             "goal_balance",
             "funding_status",
+            "owner_avatar"
         ]
         read_only_fields = ["id", "owner", "sum_pledges", "goal_balance", "funding_status"]
 
     def get_owner(self, instance):
         return instance.owner.username
 
+    def get_owner_avatar(self, instance):
+        # providing access to the the avatar of the owner
+        return instance.owner.avatar
+
 
 class CommentSerializer(serializers.ModelSerializer):
     project = serializers.SlugRelatedField(queryset=Project.objects.all(), slug_field="title")
     commenter = serializers.ReadOnlyField(source="commenter.username")
+    commenter_avatar = serializers.SerializerMethodField()
+
 
     class Meta:
         model = Comment
-        fields = ["id", "created", "body", "commenter", "project"]
+        fields = ["id", "created", "body", "commenter", "project","commenter_avatar"]
         read_only_fields = [
             "id",
             "commenter",
         ]
     # added to remove the needs to input a supporter {automates to logged in user}
+
+    def get_commenter_avatar(self, instance):
+        # providing access to the the avatar of the commenter
+        return instance.commenter.avatar
 
 
 class ProjectDetailSerializer(ProjectSerializer):
@@ -111,6 +136,7 @@ class ProjectDetailSerializer(ProjectSerializer):
             "date_created",
             "deadline",
             "owner",
+            "owner_avatar",
             "sum_pledges",
             "goal_balance",
             "funding_status",
