@@ -28,7 +28,8 @@ SECRET_KEY = os.environ.get(
 DEBUG = os.environ.get("DJANGO_DEBUG", "False") != "False"
 DEBUG = False
 
-ALLOWED_HOSTS = ["icy-dew-540.fly.dev", "127.0.0.1", "localhost"]
+# ALLOWED_HOSTS = ["icy-dew-540.fly.dev", "127.0.0.1", "localhost"]
+ALLOWED_HOSTS = ["*"]
 CORS_ALLOW_ALL_ORIGINS = True
 CSRF_TRUSTED_ORIGINS = ["https://*.fly.dev"]
 
